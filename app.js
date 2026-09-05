@@ -2,7 +2,7 @@
 // KONFIGURASI API
 // ========================================
 
-const API_URL = "https://script.google.com/macros/s/AKfycbwEzozmnivBDywSl6Vbq305OVqgUSiKcXUxhE-PWw9-4P-9viPrpXZ1n1zRDO5TKiMs/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzQ7UT_TZ0HG8U9zWfDrMq3yFeGsFx-rEOBhB6ug7R98uBA4FOgOxIQu_0RnjR6ExT_/exec";
 
 
 // ========================================
