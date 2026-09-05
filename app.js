@@ -1715,16 +1715,29 @@ function renderTransaksi(data) {
 }
 
 function formatTanggal(tanggal) {
-
     if (!tanggal) return "-";
 
-    const date = new Date(tanggal);
+    const nilai = String(tanggal).trim();
 
-    if (isNaN(date.getTime())) {
-        return tanggal;
+    // YYYY-MM-DD
+    const match = nilai.match(/^(\d{4})-(\d{2})-(\d{2})/);
+
+    if (match) {
+        const tahun = match[1];
+        const bulan = match[2];
+        const hari = match[3];
+
+        return `${hari}/${bulan}/${tahun}`;
     }
 
-    return date.toLocaleDateString("id-ID");
+    // DD/MM/YYYY
+    const matchIndonesia = nilai.match(/^(\d{2})\/(\d{2})\/(\d{4})/);
+
+    if (matchIndonesia) {
+        return nilai.substring(0, 10);
+    }
+
+    return nilai;
 }
 
 // ========================================
